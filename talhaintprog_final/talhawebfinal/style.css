@@ -1,0 +1,88 @@
+/* Genel Ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav-menu {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Ana Sayfa */
+#home {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+}
+
+#home h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+#home p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* İletişim Formu */
+form {
+  display: block;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}

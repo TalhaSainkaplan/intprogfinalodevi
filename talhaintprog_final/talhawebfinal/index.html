@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sainkaplan Mimarlık Web Sitesi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      
+      <img src="images/logo.png" alt="Sainkaplan Mimarlık Logo" class="logo">
+      <ul class="nav-menu">
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımda</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      
+<li><a href="diger.html">Diğer</a></li>
+</ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Sainkaplan Mimarlık</h1>
+      <p>Hayallerinizi gerçeğe dönüştürüyoruz.</p>
+    
+      <img src="images/salon-dekorasyon-onerileri-44959-5035640625.jpg" alt="Salon Dekorasyonu" class="decor-image">
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Sainkaplan Mimarlık. Tüm hakları saklıdır.</p>
+  </footer>
+  <script src="script.js"></script>
+
+<section id="diger">
+    <h2>Div Yakalama Oyunu</h2>
+    <div id="game-container" style="position:relative; width:300px; height:300px; border:1px solid #000;">
+        <div id="movable-div" style="width:50px; height:50px; background-color:red; position:absolute;"></div>
+    </div>
+    <p>Hedef: Kırmızı kutuyu yakalayın!</p>
+</section>
+<script>
+    const movableDiv = document.getElementById('movable-div');
+    const container = document.getElementById('game-container');
+
+    container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left - 25; // 25px is half of the div width
+        const y = e.clientY - rect.top - 25;  // 25px is half of the div height
+        movableDiv.style.left = `${Math.min(Math.max(0, x), rect.width - 50)}px`;
+        movableDiv.style.top = `${Math.min(Math.max(0, y), rect.height - 50)}px`;
+    });
+</script>
+
+</body>
+</html>
+

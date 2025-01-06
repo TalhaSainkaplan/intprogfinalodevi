@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diğer</title>
+    <style>
+        #game-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+        #movable-div {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Div Yakalama Oyunu</h2>
+    <div id="game-container">
+        <div id="movable-div"></div>
+    </div>
+    <p style="text-align: center;">Hedef: Kırmızı kutuyu yakalayın!</p>
+    <script>
+        const movableDiv = document.getElementById('movable-div');
+        const container = document.getElementById('game-container');
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left - 25; // 25px is half of the div width
+            const y = e.clientY - rect.top - 25;  // 25px is half of the div height
+            movableDiv.style.left = `${Math.min(Math.max(0, x), rect.width - 50)}px`;
+            movableDiv.style.top = `${Math.min(Math.max(0, y), rect.height - 50)}px`;
+        });
+    </script>
+</body>
+</html>
